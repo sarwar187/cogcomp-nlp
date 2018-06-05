@@ -602,14 +602,16 @@ public class RelationFeatureExtractor {
         List<String> ret = new ArrayList<String>();
         Constituent source = r.getSource();
         Constituent target = r.getTarget();
-        String mentionViewName = ViewNames.MENTION_ACE;
-        if (!r.getSource().getTextAnnotation().hasView(mentionViewName)){
-            mentionViewName = ViewNames.MENTION_ERE;
-        }
-        if (!r.getSource().getTextAnnotation().hasView(mentionViewName)){
-            mentionViewName = ViewNames.MENTION;
-        }
-        View mentionView = source.getTextAnnotation().getView(mentionViewName);
+//        String mentionViewName = ViewNames.MENTION_ACE;
+//        if (!r.getSource().getTextAnnotation().hasView(mentionViewName)){
+//            mentionViewName = ViewNames.MENTION_ERE;
+//        }
+//        if (!r.getSource().getTextAnnotation().hasView(mentionViewName)){
+//            mentionViewName = ViewNames.MENTION;
+//        }
+        View mentionView = source.getTextAnnotation().getView(ViewNames.MENTION);
+        //View mentionView = source.getTextAnnotation().getView(mentionViewName);
+
         if (target.getStartSpan() > source.getEndSpan()){
             List<Constituent> middle = mentionView.getConstituentsCoveringSpan(source.getEndSpan(), target.getStartSpan() - 1);
             ret.add("middle_mention_size_" + Integer.toString(middle.size()));

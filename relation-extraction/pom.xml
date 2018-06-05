@@ -32,6 +32,16 @@
         </dependency>
         <dependency>
             <groupId>edu.illinois.cs.cogcomp</groupId>
+            <artifactId>LBJLibrary</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.illinois.cs.cogcomp</groupId>
+            <artifactId>LBJ</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.illinois.cs.cogcomp</groupId>
             <artifactId>illinois-corpusreaders</artifactId>
             <version>4.0.6</version>
         </dependency>

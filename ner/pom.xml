@@ -72,6 +72,12 @@
             <version>3.8.0</version>
             <classifier>models</classifier>
         </dependency>
+
+        <dependency>
+            <groupId>edu.illinois.cs.cogcomp</groupId>
+            <artifactId>illinois-ner</artifactId>
+            <version>4.0.6</version>
+        </dependency>
     </dependencies>
 
     <build>
